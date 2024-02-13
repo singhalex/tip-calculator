@@ -1,0 +1,41 @@
+/* HTML RESET */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* Custome colors and fonts */
+:root {
+  --cyan-800: hsl(183, 100%, 15%);
+  --cyan-600: hsl(186, 14%, 43%);
+  --cyan-400: hsl(184, 14%, 56%);
+  --cyan-200: hsl(185, 41%, 84%);
+  --cyan-100: hsl(189, 41%, 97%);
+  --cyan-strong: hsl(172, 67%, 45%);
+  --white: hsl(0, 0%, 100%);
+
+  --font: "Space Mono", monospace;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  min-width: 320px;
+  min-height: 100vh;
+
+  /* Center the app */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--cyan-200);
+
+  font-family: var(--font);
+}

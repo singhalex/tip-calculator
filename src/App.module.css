@@ -1,0 +1,13 @@
+.logo {
+  /* Center and position logo */
+  display: block;
+  margin-inline: auto;
+  margin-bottom: 5.5rem;
+  transition: margin 0.25s ease-out;
+}
+
+@media (width <= 728px) {
+  .logo {
+    margin-bottom: 2rem;
+  }
+}

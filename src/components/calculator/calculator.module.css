@@ -1,0 +1,196 @@
+.wrapper {
+  background-color: var(--white);
+
+  width: clamp(250px, 100vw, 922px);
+  min-height: 480px;
+  margin-bottom: 4.5rem;
+  padding: 2rem;
+  transition: padding 0.25s ease-out;
+
+  border-radius: 1.5rem;
+
+  /* Responsive grid */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+  gap: 2rem;
+
+  box-shadow: 0rem 1rem 2rem rgb(0, 0, 0, 0.1);
+}
+
+label {
+  display: block;
+}
+
+input {
+  font: var(--font);
+  font-size: 1.5rem;
+  background-color: var(--cyan-100);
+  border: none;
+  border-radius: 0.5rem;
+  text-align: right;
+  padding-block: 0.25rem;
+  padding-inline: 1rem;
+  margin-top: 0.375rem;
+}
+
+input:focus {
+  outline: #9ee8df solid 2px;
+}
+
+/* Remove up and down arrows from number inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+::placeholder {
+  opacity: 1;
+  color: var(--cyan-200);
+}
+
+.leftWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: var(--cyan-800);
+  padding: 1rem;
+}
+
+.inputWrapper {
+  display: flex;
+  flex-direction: column;
+
+  position: relative;
+}
+
+/* Position icons within input fields */
+.dollar,
+.person {
+  position: absolute;
+  left: 18px;
+  top: 44px;
+}
+
+.peopleLabelWrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.invalid {
+  color: red;
+}
+
+.invalidPeople {
+  outline: 2px red solid;
+}
+
+/* Responsive grid for buttons */
+.buttonGrid {
+  padding-top: 1rem;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+button {
+  font: var(--font);
+  font-size: 1.5rem;
+  color: var(--white);
+  border: none;
+  background-color: var(--cyan-800);
+  padding-block: 0.375rem;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #9ee8df;
+  color: var(--cyan-800);
+}
+
+.activeTip {
+  background-color: var(--cyan-strong);
+}
+
+.tipInput {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+button,
+.tipInput {
+  border-radius: 0.25rem;
+}
+
+.resetButton {
+  height: 3rem;
+  width: 100%;
+  background-color: var(--cyan-strong);
+  color: var(--cyan-800);
+  font-size: 1.25rem;
+}
+
+.resetButton:disabled {
+  cursor: default;
+  opacity: 20%;
+}
+
+.resultsWrapper {
+  background-color: var(--cyan-800);
+  border-radius: 1rem;
+  padding: 2rem;
+  color: var(--white);
+
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.resultLine {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.tipLabel {
+  margin-top: 0.25rem;
+}
+
+.perPerson {
+  font-size: 0.75rem;
+  color: var(--cyan-400);
+}
+
+.dollarAmounts {
+  color: var(--cyan-strong);
+  font-size: 3rem;
+  transition: font-size 0.25s ease-out;
+}
+
+@media (width <= 475px) {
+  .wrapper {
+    padding: 1rem;
+    gap: 1.5rem;
+    margin-bottom: -2.5rem;
+  }
+
+  .leftWrapper {
+    gap: 2rem;
+  }
+
+  .resultsWrapper {
+    margin-inline: 0.5rem;
+    margin-top: 0rem;
+    padding: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .dollarAmounts {
+    font-size: 2rem;
+  }
+}
